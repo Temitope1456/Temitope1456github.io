@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>NYC Taxi Trips Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="favicon.png" type="image/x-icon">
+		<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+		<style>
+			.back-button {
+				display: block;
+				text-align: center;
+				margin: 20px 0;
+			}
+		</style>
+	<body class="is-preload">
+		<a class="back-button" href="javascript:history.back()">Back</a>
+		<!-- Main -->
+			<div id="main">
+				<div class="box container">
+					<section class="centered-text">
+						<div class="content">
+							<style>
+								.image-container {
+								  display: flex;
+								  justify-content: center;
+								  align-items: center;
+								  height: 300px; /* Adjust the height as needed */
+								}
+							  </style>
+							
+							
+							<a href="index 8.html" class="image fit"><img src="images/Taxi.png" alt="Nyc image" /></a>
+								<div class="centered-text">
+									<h3 style="text-align: center;">NYC Taxi Trips Analysis</h3>
+							  			<h3 style="text-align: center;">About</h3>
+							  
+							  <p>This dataset contains 6 tables in csv format, along with a geospatial map in TopoJSON and Shapefile formats.
+								The 4 Taxi Trips tables contain a total of 28 million Green Taxi trips in New York City from 2017 to 2020. Each record represents one trip, with fields containing details about the pick-up/drop-off times and locations, distances, fares, passengers, and more.
+								The 454 Calendar table contains a fiscal calendar (2017-2018) used by the Taxi & Limousine Commission, with fields containing the date and fiscal year, quarter, month, and week.
+								The Taxi Zones table contains information about 265 zone locations in New York City, including the location id, borough, and service zone.
+								The Taxi Zones Map files contain a map of New York City with divisions for the 265 locations that can be used to create custom map visuals in Power BI (TopoJSON) or Tableau (Shapefile).</p>
+							<a href="index 8.html" class="image fit"><img src="images/Nys-1.png" alt="" /></a>
+							<br/><a href="index 8.html" class="image fit"><img src="images/Nys-2.png" alt="" /></a>
+							<br/><h3>The Objective</h3>
+									<p>To use the Historical Data to answer the following questions:<br/>
+									• What's the average number of trips we can expect this week?<br/>
+									• What's the average fare per trip we expect to collect?<br/>
+									• What's the average distance traveled per trip?<br/>
+									• How do we expect trip volume to change, relative to last week?<br/>
+									• Which days of the week and times of the day will be busiest?<br/>
+									• What will likely be the most popular pick-up and drop-off locations?<br/>
+									</p>
+									
+									<h3>The Data Cleaning and Transformation</h3>
+									<p>The following steps were taken to clean and transform the raw data before answering the Questions:<br/>
+										• I focussed on trips that were NOT sent via “store and forward”.<br/>
+										• Attention was also given to street-hailed trips paid by card or cash, with a standard rate.<br/>
+										• I removed any trips with dates before 2017 or after 2018, 
+										<br/>along with any trips with pickups or drop-offs into unknown zones.<br/>
+										• It was assumed that any trips with no recorded passengers had 1 passenger.<br/>
+										• If a pickup date/time is AFTER the drop-off date/time, the dates were swapped.<br/>
+										• I removed trips lasting longer than a day, and any trips which showed both a distance 
+										<br/>and fare amount of 0.<br/>
+										• Records where the fare, taxes, and surcharges are ALL negative, I made them positive.<br/>
+										• For trips that had a fare amount but have a trip distance of 0, the distance was calculated with this equation : (Fare amount - 2.5) / 2.5.<br/>
+										• For trips that have a trip distance but have a fare amount of 0, 
+										<br/>the fare amount was calculated with this equation: 2.5 + (trip distance x 2.5).<br/>
+									</p>
+							</div>
+										
+						</div>
+				
+						</div>
+					</section>											
+				<footer class="container medium">
+				</footer>
+			
+			
+		<!-- Footer -->
+			
+		<style>
+			.icon-container {
+				display: flex;
+				justify-content:center;
+				align-items: center;
+				height: 2vh; 
+			  }
+				.contact-icons li {
+					margin-right: 10px; 
+				}
+
+			  </style>
+
+<ul class="icon-container contact-icons" >
+	<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+	<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+	<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
+	<li><a href="https://github.com/temitope1456" class="icon brands fa-phone"><span class="label">phone</span></a></li>
+	<li><a href="mailto:temitope1456.amt@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>				
+	<li><a href="https://www.linkedin.com/in/temitope1456/" class="icon brands fa-linkedin"><span class="label">linkedin</span></a></li>				
+	<li><a href="https://github.com/temitope1456" class="icon brands fa-github"><span class="label">Github</span></a></li>
+	<!-- <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li> -->
+</ul>
+<ul class="copyright icon-container ">
+	<li>Redesigned by <a href="https://www.linkedin.com/in/temitope1456/">Temiyemi Akinsinde</a></li>
+</ul>
+<ul class="copyright icon-container ">
+	<li>&copy; 2024</li>
+							<!-- Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
+					</ul>
+
+				</div>
+			</div>
+			<a class="back-button" href="javascript:history.back()">Back</a>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
